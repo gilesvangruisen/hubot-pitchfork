@@ -2,7 +2,7 @@ var superagent = require('superagent')
 var cheerio = require('cheerio')
 
 module.exports = function (robot) {
-  robot.hear(/pfork search (.*)/i, (res) => {
+  robot.respond(/pfork search (.*)/i, (res) => {
     const q = res.match[1]
     searchPitchfork(q).then((reviews) => {
       const list = reviews.reduce((accum, review) => {
@@ -15,7 +15,7 @@ module.exports = function (robot) {
     })
   })
 
-  robot.hear(/pfork what do you think of (.*)/i, (res) => {
+  robot.respond(/pfork what do you think of (.*)/i, (res) => {
     res.send (`${randomSnark()} – 6.8`)
   })
 }
