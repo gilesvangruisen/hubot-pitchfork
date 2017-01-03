@@ -1,6 +1,6 @@
 {
   "name": "hubot-pitchfork",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A snobby, music-loving bot script",
   "main": "index.js",
   "scripts": {
